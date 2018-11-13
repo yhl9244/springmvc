@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="<c:url value="/WEB-INF/static/css/test.css"/> "/>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/css/test.css"/> "/>
 </head>
 <body>
 <p>Spring MVC based on XML config success!</p>
