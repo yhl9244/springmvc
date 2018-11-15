@@ -25,21 +25,16 @@ public class CommonInterceptor extends HandlerInterceptorAdapter {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        if("GET".equalsIgnoreCase(request.getMethod())) {
-        }
         System.out.println("==============执行顺序: 1、preHandle================");
-        String requestURI = request.getRequestURI();
+        /*String requestURI = request.getRequestURI();
         String contextPath = request.getContextPath();
         String url = requestURI.substring(contextPath.length());
-        if(url.contains("login")){
-            request.getSession().setAttribute("user", "yhl");
-        }
 
         System.out.println("requestURI:" + requestURI);
         System.out.println("contextPath:" + contextPath);
-        System.out.println("url:" + url);
+        System.out.println("url:" + url);*/
 
-        String user = (String) request.getSession().getAttribute("user");
+        /*String user = (String) request.getSession().getAttribute("user");
         if(user == null) {
             System.out.println("Interceptor：跳转到login页面！");
             request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
@@ -47,7 +42,8 @@ public class CommonInterceptor extends HandlerInterceptorAdapter {
         } else {
             request.getRequestDispatcher("/WEB-INF/view/hello.jsp").forward(request, response);
             return true;
-        }
+        }*/
+        return true;
     }
 
     /**
